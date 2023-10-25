@@ -2,12 +2,8 @@ package com.dam.contador
 
 class DataClasses {
 
-    data class Nombre(val name: String) {
-        var nom: String = ""
-    }
-
-    data class NumeroActual(val name: String) {
-        var num: Int = 0
-    }
+    data class Datos(var num: Int = 0,
+                     var nom: String = "",
+                     val numList: List<Int> = emptyList())
 
 }

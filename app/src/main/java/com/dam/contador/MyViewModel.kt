@@ -8,22 +8,25 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 
 class MyViewModel : ViewModel() {
-    var nombre = DataClasses.Nombre("Nombre")
-    var numero = DataClasses.NumeroActual("UltimoNumeroAleatorio")
-    var numeroList = mutableStateListOf<Int>()
+    var datos = DataClasses.Datos(1, "Hola")
     fun funcionRandom() {
 
-        numero.num = (0..3).random()
-        numeroList.add(numero.num)
+        val datosAct = datos.copy(num = (0..3).random())
+        datos = datosAct
 
         Log.d("Tag", "Estoy en el random")
     }
 
+    fun updateName(newName: String) {
+        val datosAct = datos.copy(nom = newName)
+        datos = datosAct
+    }
 
     fun getNum(): Int {
-        return numero.num
+        return datos.num
     }
+
 fun getLista():List<Int>{
-    return numeroList
+        return datos.numList
     }
 }
