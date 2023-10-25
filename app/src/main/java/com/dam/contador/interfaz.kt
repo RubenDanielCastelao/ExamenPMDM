@@ -1,9 +1,13 @@
 import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -50,59 +54,72 @@ fun IU(miViewModel: MyViewModel) {
                 modifier = Modifier.align(Alignment.End)
             )
         }
-        Row {
-            Button(
-                onClick = { Log.d("Tag", "Boton rojo") },
-                modifier = Modifier
-                    .size(64.dp)
-                    .background(Color.Blue)
-                    .padding(64.dp),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Transparent,
-                    contentColor = Color.White
-                )
+        Column(
+            modifier = Modifier.padding(60.dp)
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(20.dp)
             ) {
+                Button(
+                    onClick = { Log.d("Tag", "Boton rojo") },
+                    modifier = Modifier
+                        .size(120.dp)
+                        .background(Color.Blue)
+                        .padding(64.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.Transparent,
+                        contentColor = Color.White
+                    )
+                ) {
 
+                }
+
+                Button(
+                    onClick = { Log.d("Tag", "Boton rojo") },
+                    modifier = Modifier
+                        .size(120.dp)
+                        .background(Color.Green)
+                        .padding(64.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.Transparent,
+                        contentColor = Color.White
+                    )
+                ) {
+                }
             }
 
-            Button(
-                onClick = { Log.d("Tag", "Boton rojo") },
-                modifier = Modifier
-                    .size(64.dp)
-                    .background(Color.Green)
-                    .padding(64.dp),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Transparent,
-                    contentColor = Color.White
-                )
-            ) {
-            }
-        }
-        Row {
-            Button(
-                onClick = { Log.d("Tag", "Boton rojo") },
-                modifier = Modifier
-                    .size(64.dp)
-                    .background(Color.Red)
-                    .padding(64.dp),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Transparent,
-                    contentColor = Color.White
-                )
-            ) {
-            }
+            Spacer(modifier = Modifier.height(20.dp))
 
-            Button(
-                onClick = { Log.d("Tag", "Boton rojo") },
-                modifier = Modifier
-                    .size(64.dp)
-                    .background(Color.Yellow)
-                    .padding(64.dp),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Transparent,
-                    contentColor = Color.White
-                )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(20.dp)
             ) {
+                Button(
+                    onClick = { Log.d("Tag", "Boton rojo") },
+                    modifier = Modifier
+                        .size(120.dp)
+                        .background(Color.Red)
+                        .padding(64.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.Transparent,
+                        contentColor = Color.White
+                    )
+                ) {
+                }
+
+                Button(
+                    onClick = { Log.d("Tag", "Boton rojo") },
+                    modifier = Modifier
+                        .size(120.dp)
+                        .background(Color.Yellow)
+                        .padding(64.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.Transparent,
+                        contentColor = Color.White
+                    )
+                ) {
+                }
             }
         }
         Row {

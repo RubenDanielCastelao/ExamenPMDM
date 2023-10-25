@@ -12,7 +12,8 @@ class MyViewModel : ViewModel() {
     val numeroList = mutableListOf<Int>()
     var ronda by mutableStateOf(0)
     var startEstado by mutableStateOf("START")
-
+    var reset = 1
+    var start = 0
 
     fun funcionRandom() {
 
