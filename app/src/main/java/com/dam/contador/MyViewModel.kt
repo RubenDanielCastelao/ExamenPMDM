@@ -8,10 +8,11 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 
 class MyViewModel : ViewModel() {
-    var datos = DataClasses.Datos(1, "Hola")
+    var datos = DataClasses.Datos(0, "0")
     fun funcionRandom() {
 
         val datosAct = datos.copy(num = (0..3).random())
+        datosAct.numList.add(datosAct.num)
         datos = datosAct
 
         Log.d("Tag", "Estoy en el random")

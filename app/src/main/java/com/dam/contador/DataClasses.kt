@@ -4,6 +4,6 @@ class DataClasses {
 
     data class Datos(var num: Int = 0,
                      var nom: String = "",
-                     val numList: List<Int> = emptyList())
-
-}
+                     val numList: MutableList<Int> = mutableListOf()
+    )
+    }
