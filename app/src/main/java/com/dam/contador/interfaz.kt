@@ -23,7 +23,7 @@ fun IU(miViewModel: MyViewModel) {
 
     Column {
 
-        if (miViewModel.nombre.length in 4..19) {
+        if (miViewModel.nombre.nom.length in 4..19) {
             Text(
                 text = "Nombre: ${ miViewModel.nombre}!",
                 fontSize = 24.sp,
@@ -34,7 +34,7 @@ fun IU(miViewModel: MyViewModel) {
         OutlinedTextField(
             value = miViewModel.nombre,
             onValueChange = {
-                miViewModel.nombre = it
+                miViewModel.nombre.nom= it
             },
             label = { Text(text = "Name (Max 20 chars)") }
         )
@@ -45,7 +45,7 @@ fun IU(miViewModel: MyViewModel) {
 
     Column {
         Text(
-            text = "Último número: ${miViewModel.getNumero()}"+"\n Historial de números: ${miViewModel.getLista()}" ,
+            text = "Último número: ${miViewModel.getNum()}"+"\n Historial de números: ${miViewModel.getLista()}" ,
             modifier = Modifier.padding(100.dp),
             color = Color.Blue
         )
